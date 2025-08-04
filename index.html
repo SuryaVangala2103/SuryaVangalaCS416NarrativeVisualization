@@ -85,7 +85,7 @@
       const processed = Array.from(yearly, ([Year, LifeExpectancy]) => ({ Year, LifeExpectancy }));
 
       drawLineChart(processed, "Global Average Life Expectancy", "Year", "LifeExpectancy");
-      d3.select("#annotation").text("Scene 1: Life expectancy globally has increased over time.");
+      d3.select("#annotation").text("Scene 1: Life expectancy global avg");
     }
 
     function drawScene2() {
@@ -128,7 +128,7 @@
         .text(d => d.name)
         .attr("fill", d => d.name === "Developed" ? "steelblue" : "green");
 
-      d3.select("#annotation").text("Scene 2: Developed vs Developing — both improving, but at different paces.");
+      d3.select("#annotation").text("Scene 2: Developed vs Developing Countries avg Life Expectancy");
     }
 
     function drawScene3() {
@@ -151,7 +151,7 @@
 
       // Initial country
       updateCountryChart(countries[0]);
-      d3.select("#annotation").text("Scene 3: Drill down — select a country to explore its life expectancy trend.");
+      d3.select("#annotation").text("Scene 3: Select a country to explore its life expectancy trend.");
 
       function updateCountryChart(country) {
         svg.selectAll("*").remove(); // Clear previous
